@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Coffee-inspired color palette */
+    --background: 30 8% 97%;              /* Cream white like steamed milk */
+    --foreground: 25 20% 15%;             /* Dark coffee brown text */
+
+    --card: 30 12% 94%;                   /* Light cream for cards */
+    --card-foreground: 25 18% 18%;        /* Coffee text */
+
+    --popover: 30 12% 94%;                /* Light cream */
+    --popover-foreground: 25 18% 18%;     /* Coffee text */
+
+    --primary: 30 45% 35%;                /* Rich coffee brown */
+    --primary-foreground: 30 8% 97%;      /* Cream text on dark */
+
+    --secondary: 30 25% 85%;              /* Light coffee with milk */
+    --secondary-foreground: 25 18% 18%;   /* Coffee text */
+
+    --muted: 30 15% 90%;                  /* Very light coffee cream */
+    --muted-foreground: 25 12% 45%;       /* Medium coffee brown */
+
+    --accent: 35 45% 75%;                 /* Warm caramel/latte color */
+    --accent-foreground: 25 18% 18%;      /* Coffee text */
+
+    --destructive: 0 84% 60%;             /* Keep red for errors */
+    --destructive-foreground: 30 8% 97%;  /* Cream text */
+
+    --border: 30 20% 88%;                 /* Light coffee border */
+    --input: 30 15% 92%;                  /* Light cream input */
+    --ring: 25 35% 25%;                   /* Espresso focus ring */
+
+    --success: 120 30% 35%;               /* Coffee leaf green */
+    --success-foreground: 30 8% 97%;      /* Cream text */
+
+    --warning: 35 85% 55%;                /* Caramel warning */
+    --warning-foreground: 25 18% 18%;     /* Coffee text */
+
+    /* Coffee-specific brand colors */
+    --coffee-dark: 25 35% 25%;            /* Dark espresso */
+    --coffee-medium: 25 25% 45%;          /* Medium roast */
+    --coffee-light: 30 30% 65%;           /* Light roast/milk coffee */
+    --coffee-cream: 30 25% 85%;           /* Steamed milk */
+    --coffee-foam: 30 8% 97%;             /* Milk foam white */
+
+    /* Coffee-inspired gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25, 35%, 25%), hsl(25, 25%, 35%));
+    --gradient-secondary: linear-gradient(135deg, hsl(30, 25%, 85%), hsl(30, 15%, 90%));
+    --gradient-hero: linear-gradient(135deg, hsl(30, 8%, 97%), hsl(30, 20%, 88%));
+    --gradient-coffee: linear-gradient(135deg, hsl(25, 35%, 25%) 0%, hsl(30, 30%, 65%) 100%);
+
+    /* Coffee-themed shadows */
+    --shadow-elevated: 0 10px 30px -10px hsl(25 35% 25% / 0.15);
+    --shadow-soft: 0 4px 20px -5px hsl(25 25% 45% / 0.12);
+    --shadow-story: 0 8px 25px -8px hsl(25 30% 35% / 0.2);
+
+    --radius: 0.5rem;
+
+    /* Sidebar coffee theme */
+    --sidebar-background: 30 8% 97%;
+    --sidebar-foreground: 25 20% 15%;
+    --sidebar-primary: 25 35% 25%;
+    --sidebar-primary-foreground: 30 8% 97%;
+    --sidebar-accent: 30 15% 90%;
+    --sidebar-accent-foreground: 25 18% 18%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 25 35% 25%;
+  }
+
+  .dark {
+    /* Dark coffee theme - like a cozy coffee shop at night */
+    --background: 25 25% 8%;              /* Very dark coffee brown */
+    --foreground: 30 8% 92%;              /* Cream text */
+
+    --card: 25 20% 12%;                   /* Dark coffee card */
+    --card-foreground: 30 8% 92%;         /* Cream text */
+
+    --popover: 25 20% 12%;                /* Dark coffee popover */
+    --popover-foreground: 30 8% 92%;      /* Cream text */
+
+    --primary: 30 25% 85%;                /* Light coffee in dark mode */
+    --primary-foreground: 25 25% 8%;      /* Dark text on light */
+
+    --secondary: 25 15% 18%;              /* Medium dark coffee */
+    --secondary-foreground: 30 8% 92%;    /* Cream text */
+
+    --muted: 25 15% 18%;                  /* Medium dark coffee */
+    --muted-foreground: 30 20% 65%;       /* Light coffee text */
+
+    --accent: 25 15% 18%;                 /* Medium dark coffee */
+    --accent-foreground: 30 8% 92%;       /* Cream text */
+
+    --destructive: 0 62% 45%;             /* Darker red for dark mode */
+    --destructive-foreground: 30 8% 92%;  /* Cream text */
+
+    --border: 25 15% 18%;                 /* Dark coffee border */
+    --input: 25 15% 18%;                  /* Dark coffee input */
+    --ring: 30 25% 85%;                   /* Light coffee focus ring */
+
+    /* Dark mode sidebar */
+    --sidebar-background: 25 25% 8%;
+    --sidebar-foreground: 30 8% 92%;
+    --sidebar-primary: 30 25% 85%;
+    --sidebar-primary-foreground: 25 25% 8%;
+    --sidebar-accent: 25 15% 18%;
+    --sidebar-accent-foreground: 30 8% 92%;
+    --sidebar-border: 25 15% 18%;
+    --sidebar-ring: 30 25% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
